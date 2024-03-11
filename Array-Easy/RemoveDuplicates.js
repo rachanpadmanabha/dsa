@@ -38,8 +38,9 @@ function removeDuplicates2(arr) {
     }
     return i + 1;
 }
-
-let a = removeDuplicates([1, 1, 2, 2, 2, 3, 3])
-console.log(a)
-let b = removeDuplicates([1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 5])
-console.log(b)
+arr1 = [1, 1, 2, 2, 2, 3, 3]
+let a = removeDuplicates2(arr1)
+console.log(a, arr1)
+arr2 = [1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 5]
+let b = removeDuplicates2(arr2)
+console.log(b, arr2)
