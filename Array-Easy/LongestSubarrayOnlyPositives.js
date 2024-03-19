@@ -19,18 +19,16 @@ function longestSubArray(arr, k) {
     for (let index = 0; index < arr.length; index++) {
         sum += arr[index]
         if (sum == k) {
-            maxLength = Math.max(maxLength, i + 1)
+            maxLength = Math.max(maxLength, index + 1)
         }
         let rem = k - sum
         if (preSumMap.has(rem)) {
-            let len = i - preSumMap.get(rem)
+            let len = index - preSumMap.get(rem)
             maxLength = Math.max(maxLength, len)
         }
         if (!preSumMap.has(sum)) {
-            preSumMap.set(sum, i)
+            preSumMap.set(sum, index)
         }
-
-
     }
     return maxLength
 }

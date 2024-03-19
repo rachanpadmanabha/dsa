@@ -18,9 +18,10 @@
 // Explanation: There are two consecutive 1's in the array. 
 
 function maxConsecutiveOnes(arr) {
-    let tempCount = 0
+
     let count = 0
     for (let index = 0; index < arr.length; index++) {
+        let tempCount = 0
         if (arr[index] === 1) {
             tempCount++
         }
@@ -28,10 +29,7 @@ function maxConsecutiveOnes(arr) {
             count = count == 0 || count <= tempCount ? tempCount : count
             tempCount = 0
         }
-
-
     }
-    count = count == 0 || count <= tempCount ? tempCount : count
     return count
 }
 let a = maxConsecutiveOnes([1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0])
